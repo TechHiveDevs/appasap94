@@ -1,0 +1,158 @@
+
+  /asap:
+    get:
+     summary: Get all asaps
+     tags: [asap]
+     responses:
+       200:
+        schema:
+          $ref: '#/components/schemas/asap'
+ 
+    post:
+      summary: Create asap
+      tags: [asap]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/asap'
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/asap'
+ 
+  /asap/{id}:
+    get:
+      summary: Get asap by id
+      tags: [asap]
+      parameters:
+        - in: path
+          name: id
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/asap'
+ 
+    put:
+      summary: Edit asap
+      tags: [asap]
+      parameters:
+        - in: path
+          name: id
+      responses:
+        202:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/asap'
+      requestBody:
+        content:
+            application/json:
+              schema:
+               $ref: '#/components/schemas/asap'
+ 
+    delete:
+      summary: Delete asap
+      tags: [asap]
+      parameters:
+        - in: path
+          name: id
+      responses:
+        202:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/asap'
+
+  /app:
+    get:
+     summary: Get all apps
+     tags: [app]
+     responses:
+       200:
+        schema:
+          $ref: '#/components/schemas/app'
+ 
+    post:
+      summary: Create app
+      tags: [app]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/app'
+      responses:
+        201:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/app'
+ 
+  /app/{id}:
+    get:
+      summary: Get app by id
+      tags: [app]
+      parameters:
+        - in: path
+          name: id
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/app'
+ 
+    put:
+      summary: Edit app
+      tags: [app]
+      parameters:
+        - in: path
+          name: id
+      responses:
+        202:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/app'
+      requestBody:
+        content:
+            application/json:
+              schema:
+               $ref: '#/components/schemas/app'
+ 
+    delete:
+      summary: Delete app
+      tags: [app]
+      parameters:
+        - in: path
+          name: id
+      responses:
+        202:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/app'
+
+  components:
+    schemas:
+  
+      asap:
+        type: object
+        properties:
+      
+          id:
+            type: string
+          weee:
+            type: string
+          app:
+            type: string
+      app:
+        type: object
+        properties:
+      
+          id:
+            type: number
